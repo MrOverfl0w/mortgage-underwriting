@@ -1,0 +1,37 @@
+# Global
+.DS_Store
+Thumbs.db
+.env
+.env.local
+
+# Node (frontend)
+frontend/node_modules/
+frontend/dist/
+frontend/.next/
+frontend/.cache/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+
+# Go (backend)
+backend/bin/
+backend/mortgage-underwriting
+backend/coverage.out
+
+# Go build artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+# Logs
+*.log
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
+*.swo
