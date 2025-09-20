@@ -49,11 +49,11 @@ func GenerateLoanDecision(score int, dti, ltv float64, occupancy string, loanAmo
 		return loanDeclined, "DTI exceeds 36% for credit score below 700"
 	}
 	if dti > 0.5 {
-		return loanDeclined, "DTI exceeds 43%"
+		return loanDeclined, "DTI exceeds 50%"
 	}
 
 	// Standard approval
-	if score >= 700 && dti <= 0.43 && ((occupancy == "primary" && ltv <= 0.97) || (ltv <= 0.85)) {
+	if score >= 700 && dti <= 0.43 && ((occupancy == "primary" && ltv <= 0.90) || (ltv <= 0.80)) {
 		return loanApproved, "Meets standard approval criteria"
 	}
 

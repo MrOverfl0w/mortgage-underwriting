@@ -2,6 +2,16 @@
 
 A full-stack mortgage underwriting web application with a Go backend and a React (Vite) frontend.
 
+The calculations for the decision are set by usual real-life rules searched in Google. Some of this are:
+
+- Property value and loan amount not under $75.000 and $50.000, respectivelly
+- A special rule for high credit score, allowing up to 45% dti and 95% ltv
+- Minimum credit score of 620 for primary occupancy and 680 for secondary/investment.
+- Maximum of 90% ltv for primary occupancy and 80% for seconday/investment.
+- Limit maximum dti to 36% when credit score below 700.
+- Not more than 50% dti in any case
+- Default approval when score beyond 700, dti at most 43% and ltv of 90% or lower for primary occupancy or 80% for the secondary/investment.
+
 ---
 
 ## Features
